@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="home"
+        android:icon="@mipmap/ic_home"/>
+    <item android:id="@+id/sholat"
+        android:title="Sholat"
+        android:icon="@mipmap/ic_launcher"/>
+    <item android:id="@+id/alquran"
+        android:title="Alquran"
+        android:icon="@mipmap/ic_orang"/>
+
+</menu>

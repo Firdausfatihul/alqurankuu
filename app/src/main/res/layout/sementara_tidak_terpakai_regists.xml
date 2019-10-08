@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:src="@drawable/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
+
+    <EditText
+        android:id="@+id/user"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/aa"
+        android:hint="username"/>
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="200dp"
+        android:drawableLeft="@drawable/lock"
+        android:layout_height="wrap_content"
+        android:hint="password"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/belum_mendaftar"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"/>
+
+        <TextView
+            android:id="@+id/regist"
+            android:text="@string/daftar_sekarang"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="35dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
