@@ -20,6 +20,7 @@ public class AdapterSurah extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     View view;
     ArrayList<ModalAyatHome> modalAyatHomes;
 
+
     public AdapterSurah(View view, ArrayList modalAyatHomes) {
         this.view = view;
         this.modalAyatHomes = modalAyatHomes;
