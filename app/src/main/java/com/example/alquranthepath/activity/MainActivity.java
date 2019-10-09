@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         loadFragment(new FragmentHome());
 
-        //Request API volley
 
 
     }
