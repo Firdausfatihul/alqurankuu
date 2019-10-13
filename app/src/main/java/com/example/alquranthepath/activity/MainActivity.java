@@ -23,6 +23,7 @@ import com.example.alquranthepath.R;
 import com.example.alquranthepath.fragment.FragmentAlquran;
 import com.example.alquranthepath.fragment.FragmentHome;
 import com.example.alquranthepath.fragment.FragmentSholat;
+import com.github.ybq.android.spinkit.SpinKitView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONObject;
@@ -31,14 +32,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     FrameLayout frame;
     BottomNavigationView bottomNavigationView;
-
-
+    SpinKitView spinKitView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        spinKitView = findViewById(R.id.spin_kit);
         frame = findViewById(R.id.frame);
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);

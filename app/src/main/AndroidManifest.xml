@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".activity.SurahActivity"/>
         <activity android:name=".activity.SementaraTidakTerpakaiRegistActivity"/>
+        <activity android:name=".activity.JadwalSholatActivity"/>
     </application>
 
 </manifest>

@@ -29,6 +29,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class FragmentHome extends Fragment {
 
@@ -54,6 +56,8 @@ public class FragmentHome extends Fragment {
 
         rc.setLayoutManager(glm);
         rc.setAdapter(adapterHome);
+
+
 
         //RequestVolleyArray
         requestQueue = Volley.newRequestQueue(context.getApplicationContext());
