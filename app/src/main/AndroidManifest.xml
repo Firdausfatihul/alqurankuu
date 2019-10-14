@@ -3,6 +3,7 @@
     package="com.example.alquranthepath">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,6 +20,7 @@
         <activity android:name=".activity.SurahActivity"/>
         <activity android:name=".activity.SementaraTidakTerpakaiRegistActivity"/>
         <activity android:name=".activity.JadwalSholatActivity"/>
+        <activity android:name=".activity.Server"/>
     </application>
 
 </manifest>

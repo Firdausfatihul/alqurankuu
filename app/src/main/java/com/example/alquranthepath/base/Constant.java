@@ -7,4 +7,5 @@ public class Constant {
     public static final String FIRST_SHOLAT = "https://api.banghasan.com/sholat/format/json/kota";
     public static final String ROOT_SHOLAT = "https://api.banghasan.com/sholat/format/json/jadwal/kota/";
     public static final String ROOT_ENDSHOLAT = "/tanggal/";
+    public static final String ROOT_MPTRI = "http://mp3quran.net/api/_english.php";
 }
