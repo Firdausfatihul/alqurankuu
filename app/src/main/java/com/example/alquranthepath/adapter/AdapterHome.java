@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -23,14 +24,17 @@ import java.util.ArrayList;
 public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     Context context;
+    ArrayList<ModalAyatHome> filterAyatHome;
     GridLayoutManager glm;
     RecyclerView rc;
     View view;
     ArrayList<ModalAyatHome> modalAyatHomes;
+    NameFilter filter;
 
     public AdapterHome(Context context, ArrayList<ModalAyatHome> modalAyatHomes) {
         this.context = context;
         this.modalAyatHomes = modalAyatHomes;
+        this.filterAyatHome = modalAyatHomes;
     }
 
     class AdapterHomeku extends RecyclerView.ViewHolder {
@@ -78,5 +82,45 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public int getItemCount() {
         return modalAyatHomes.size();
+
     }
+    public Filter getFilter(){
+        if (filter == null){
+            filter = new NameFilter();
+        }
+        return filter;
+    }
+
+    private class NameFilter extends Filter{
+
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            charSequence = charSequence.toString().toLowerCase();
+            FilterResults results = new FilterResults();
+
+            if (charSequence.toString().length() > 0){
+                ArrayList<ModalAyatHome> filterItems = new ArrayList<>();
+                for (int i = 0, l = filterAyatHome.size(); i < l; i++ ){
+                    String nameList = filterAyatHome.get(i).getName();
+                    if (nameList.toLowerCase().contains(charSequence))
+                        filterItems.add(filterAyatHome.get(i));
+                }
+                results.count = filterItems.size();
+                results.values = filterItems;
+            }else {
+                synchronized (this){
+                    results.values = filterAyatHome;
+                    results.count = filterAyatHome.size();
+                }
+            }
+            return results;
+        }
+        @SuppressWarnings("unchecked")
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            modalAyatHomes = (ArrayList<ModalAyatHome>) filterResults.values;
+            notifyDataSetChanged();
+        }
+    }
+
 }

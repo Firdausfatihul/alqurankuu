@@ -14,12 +14,6 @@
             android:layout_height="200dp"
             android:src="@drawable/bg_custom" />
 
-        <com.github.ybq.android.spinkit.SpinKitView
-            android:id="@+id/spin_kit"
-            android:layout_centerInParent="true"
-            style="@style/SpinKitView.FoldingCube"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="100dp"

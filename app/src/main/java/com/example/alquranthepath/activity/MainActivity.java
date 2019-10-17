@@ -2,12 +2,18 @@ package com.example.alquranthepath.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -33,12 +39,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     FrameLayout frame;
     BottomNavigationView bottomNavigationView;
     SpinKitView spinKitView;
+    Toolbar toolbar;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        spinKitView = findViewById(R.id.spin_kit);
         frame = findViewById(R.id.frame);
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -48,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
     }
-
 
 
     private boolean loadFragment(Fragment fragment) {
